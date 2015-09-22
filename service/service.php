@@ -1,6 +1,6 @@
 <?php
 
-function shell() {
+function execute() {
 	$ressource = ssh2_connect('192.168.0.73');
 	// $cmd = '';
 	// if (isset($_POST['cmd']))

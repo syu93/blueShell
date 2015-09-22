@@ -1,6 +1,9 @@
 <?php
 
-namespace BlueShell
+namespace BlueShell;
+
+use Sophwork\app\app\SophworkApp;
+use Sophwork\app\view\AppView;
 
 class Shell
 {
@@ -8,10 +11,11 @@ class Shell
 	protected $user;
 	protected $password;
 
-	public function __construct($address, $user = null, $password = null) {
-		$this->con 		= ssh2_connect($address);
-		$this->user 	$user;
-		$this->password $password;
+	public function shell(SophworkApp $app) {
+		$view = new AppView();
+		echo'<pre>';
+		var_dump($view);
+		echo'</pre>';
 	}
 
 	public function exec() {
